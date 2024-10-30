@@ -1,0 +1,128 @@
+
+
+
+    
+
+
+
+
+class ObjectType:
+
+    ACTION = 1
+    SCENARIO = 2
+    SYMBOL = 3
+
+
+
+class Element:
+
+    FIRE = 1
+    WATER = 2
+    EARTH = 3
+    AIR = 4
+    VOID = 5
+
+
+class Modality:
+
+    CARDINAL = 1
+    FIXED = 2
+    VOID =5
+    MUTABLE = 3
+
+
+
+class Signs:
+
+    ARIES_PISCES = 1
+    ARIES_ARIES = 2
+    ARIES_TAURUS = 3
+    TARUS_ARIES = 4
+    TAURUS_TAURUS = 5
+    TAURUS_GEMINI = 6
+    GEMINI_TAURUS = 7
+    GEMINI_GEMINI = 8
+    GEMINI_CANCER = 9
+    CANCER_GEMINI = 10
+    CANCER_CANCER = 11
+    CANCER_LEO = 12
+    LEO_CANCER = 13
+    LEO_LEO = 14
+    LEO_VIRGO = 15
+    VIRGO_LEO = 16
+    VIRGO_VIRGO = 17
+    VIRGO_LIBRA = 18
+    LIBRA_VIRGO = 19
+    LIBRA_LIBRA = 20
+    LIBRA_SCORPIO = 21
+    SCORPIO_LIBRA = 22
+    SCORPIO_SCORPIO = 23
+    SCORPIO_SAGITTARIUS = 24
+    SAGITTARIUS_SCORPIO = 25
+    SAGITTARIUS_SAGITTARIUS = 26
+    SAGITTARIUS_CAPRICORN = 27
+    CAPRICORN_SAGITTARIUS = 28
+    CAPRICORN_CAPRICORN = 29
+    CAPRICORN_AQUARIUS = 30
+    AQUARIUS_CAPRICORN = 31
+    AQUARIUS_AQUARIUS = 32
+    AQUARIUS_PISCES = 33
+    PISCES_AQUARIUS = 34
+    PISCES_PISCES = 35
+    PISCES_ARIES  = 36
+    VOID = 0
+
+
+class PTypes:
+
+    INTJ = 1
+    INFJ = 2
+    INFP = 3
+    ENFP = 4
+    ENFJ = 5
+    ENTP = 6
+    ESTP = 7
+    ESTJ = 8
+    ESFP = 9
+    ESFJ = 10
+    ISTP = 11
+    ISFP = 12
+    ISFJ = 13
+    INTP = 14
+    INFJ = 15
+    ENTJ = 16
+
+
+class Ensembles:
+
+
+    TRIGONE_SEXTILE = 2
+    TRIGONE_TRINE = 3
+    TRIGONE_LADDER = 12
+    TRIGONE = 1
+    T_SQUARE = 10
+    WEDGE = 7
+    YOD = 4
+
+    CASTLE = 6
+    KITE = 8
+    GRAND_CROSS = 9
+    CRADDLE = 11
+    ROLLING_CONJUNTION = 13
+    CONJUNCTION = 14
+
+
+
+
+class AngularMomentumOperators:
+
+    CONJUNCT = 1
+    OPPOSITION = 2
+    TRINE = 3
+    SQUARE = 4
+    SEXTILE = 5
+    INCONJUNCT = 6
+    QUINTILE = 7
+    SEMI_SEXTILE = 8
+    SEMI_SQUARE = 9
+    SESQUI_QUADRATE = 10

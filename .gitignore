@@ -1,0 +1,13 @@
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+models/
+monitors/
+datasets/
+recommenders/
+*.log
+*.~
+*.un~
+*.csv
+.venv/
+
