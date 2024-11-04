@@ -2,9 +2,9 @@
 from unittest import TestCase
 import sys
 sys.path.append('../')
-from reaper.reduce import Reduce, reactor_list
-from reaper.util.identifiers import Signs
-from reaper.map import Derivator, Integrator, Proportional
+import Reduce, reactor_list
+import Signs
+import Derivator, Integrator, Proportional
 
 
 

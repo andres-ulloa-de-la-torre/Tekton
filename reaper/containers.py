@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os 
 import praw
 import datetime
-from map import Integrator, Proportional, Derivator, BiphasicOscillator, TriphasicOscillator, QuadriphasicOscillator, Fuse, Mapper
+from map import Integrator, Proportional, Derivator, BiphasicOscillator, TriphasicOscillator, QuadriphasicOscillator, Map
 from filter import AxisFilter
 from util import types, Signs, Element, Modality
 from random import randint
@@ -161,12 +161,6 @@ class Envelope:
 
 
 
-
-
-
-
-
-
     @property
     def hamiltonian(self):
         """
@@ -176,8 +170,13 @@ class Envelope:
         return self.total_heat
 
 
+    def set_acceleration(self, acceleration):
 
-    def __call__(self, inertia, runners_map) -> Any:
+        self.position.acceleration = acceleration
+
+
+
+    def __call__(self, inertia, runners_map):
 
         if self.basis in [1,4,7,10]:
 
@@ -657,8 +656,7 @@ class Ensemble:
 
         self.lagrangian = []
 
-
-
+   
     def add_envelopes(self, orbs, houses, pieces, runners_map):
         """
         Adds a new set of techniques to the ensemble.
@@ -1971,8 +1969,8 @@ class Character:
 
         while converged == False: 
     
-            reducer = Reduce(runners_map) 
-            res = reducer.text(story, 1)
+            mapper = Map(runners_map) 
+            res = mapper.text_fision(story, 1)
 
             ambiance, characters, house = zip(res)
 

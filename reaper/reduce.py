@@ -1205,8 +1205,7 @@ class Reduce:
         else:
 
 
-            reactor = Reactor()
-            oscillator = reactor.fuse(formula)
+            oscillator = self.fuse(formula)
 
             return oscillator 
 
@@ -1397,6 +1396,13 @@ class Reduce:
 
 
             raise ValueError('Invalid position')
+
+
+
+
+class JungianActivationFunctions:
+
+
     def technique_mixer(self, orb_mappings):
         
         """
@@ -1590,17 +1596,6 @@ class Reduce:
         """
 
         return identity, prompt
-
-
-class OrbReducer:
-
-
-    def __init__(self) -> None:
-        self.identity = """
-
-            You are a creative fantasy writer who comes up with objects, spells, actions, monsters and chracters based on specified entities.
-
-        """
 
 
 
@@ -3623,7 +3618,7 @@ class OrbReducer:
         return self.identity, prompt
 
 
-class ObjectReducer:
+class JungianObjectReducer:
 
 
     def __init__(self) -> None:
