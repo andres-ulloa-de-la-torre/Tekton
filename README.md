@@ -1,4 +1,4 @@
-#  Reaper core
+#  Tektõn
 
 This project introduces an algebraic model for computational psychology named Tektōn, where personality and cognition are represented as functional elements using specific mathematical operations and relationships. This README provides an overview of the syntax, rules, and operations for manipulating these elements within the model.
 
