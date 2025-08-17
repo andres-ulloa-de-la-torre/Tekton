@@ -1,4 +1,4 @@
-#  Reaper core
+# Reaper core
 
 This project introduces an algebraic model for computational psychology named Tektōn, where personality and cognition are represented as functional elements using specific mathematical operations and relationships. This README provides an overview of the syntax, rules, and operations for manipulating these elements within the model.
 
@@ -6,10 +6,11 @@ This project introduces an algebraic model for computational psychology named Te
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Algebraic Rules](#algebraic-rules)
-  - [Basic Syntax](#basic-syntax)
-  - [Operators](#operators)
-  - [Priority Rules](#priority-rules)
+- [The Algebraic Language of Cognition](#the-algebraic-language-of-cognition)
+  - [Cognitive Functions & Properties](#cognitive-functions--properties)
+  - [Operators & Syntax](#operators--syntax)
+  - [Priority & Transformation Rules](#priority--transformation-rules)
+- [Astrological & Elemental Correspondence](#astrological--elemental-correspondence)
 - [Usage Examples](#usage-examples)
 - [Contributors](#contributors)
 
@@ -18,47 +19,57 @@ This project introduces an algebraic model for computational psychology named Te
 ## Introduction
 This model aims to describe elements of personality and cognition using algebraic rules. Functions representing dimensions of personality and cognitive processes can interact, combine, and influence each other through defined operations. These operations and rules simulate complex psychological dynamics and provide insights into cognitive processes and personality traits through mathematical notation.
 
-## Algebraic Rules
+## The Algebraic Language of Cognition
 
-### Basic Syntax
-- **Terms** are grouped by parentheses, e.g., `(Se ~ Ti)`.
-- **Operators**:
-  - `+` combines terms.
-  - `i` represents a negative charge, and `e` a positive charge.
-- **Dimensions**:
-  - N (Ne, Ni)
-  - F (Fe, Fi)
-  - T (Te, Ti)
-  - S (Se, Si)
+This system models cognitive dynamics. You must adhere strictly to its syntax and rules.
+
+### Cognitive Functions & Properties
+
+| Symbol | Name                  | Density        | Charge | Dimension |
+| :----: | :-------------------- | :------------- | :----: | :-------: |
+|  `Si`  | Introverted Sensing   | Very Dense     |   i    |     S     |
+|  `Ni`  | Introverted Intuition | Very Dense     |   i    |     N     |
+|  `Ne`  | Extraverted Intuition | Dense          |   e    |     N     |
+|  `Fi`  | Introverted Feeling   | Dense          |   i    |     F     |
+|  `Te`  | Extraverted Thinking  | Somewhat Light |   e    |     T     |
+|  `Fe`  | Extraverted Feeling   | Somewhat Light |   e    |     F     |
+|  `Ti`  | Introverted Thinking  | Light          |   i    |     T     |
+|  `Se`  | Extraverted Sensing   | Very Light     |   e    |     S     |
+
+### Operators & Syntax
+
+- **Grouping `( )`**: Parentheses group terms for isolated operations. e.g., `(Se ~ Ti)`.
+- **Combination `+`**: Combines separate terms.
 - **Coefficients**:
-  - Coefficients adjacent to functions describe mass.
-  - Coefficients outside of parentheses describe acceleration and do not affect internal mass coefficients.
+  - A number preceding a function denotes its **mass**. (e.g., `5Si`).
+  - A number outside parentheses denotes **acceleration** and does not affect internal mass. (e.g., `40(...)`).
 
-**Example**: 
-`2(Se ~ Ti)` – here `2` denotes acceleration.
+- **Top `~`**: The 'right operator'. Describes a relationship where a T/F function orbits an S/N function (or vice versa). In this operation, the primary operand is compartmentalized into "chunks" of action or judging categorization by the second operand, bringing order to it and creating a drag.
 
-### Operators
-- **Orbital (`~`)**: Describes a relationship where a T or F function orbits an S or P function. No coefficient exchange occurs.
-- **Drag (`→`)**: Represents a function pulling an opposite-charge and opposite-domain function. Not equivalent to voltage.
-- **Opposition (`oo`)**: Subtracts functions of the same domain with different charges, producing a drag.
-  - Example: `Fe oo Fi`, `Ne oo Ni`
-- **Non-interaction (`|`)**: Indicates that two terms cannot interact due to a lack of rules for reaction.
-- **Subtraction with drag rule**:
-  - If the drag coefficient is larger, it "carries" the difference. 
-  - Example: `7Se oo 5Si = 2Se → Ni`
+- **Right `→`**: The 'drag' operator. Represents a function pulling an opposite-charge and opposite-domain function. This is a retroactive mechanism where a function becomes its opposite by reacting with other functions, but maintains a link to its previous state.
 
-### Priority Rules
-1. **Addition of Same Functions**: Functions of the same type (e.g., `Se`) add their coefficients.
-   - Example: `(2Se) + (2Se) = (4Se)`
-2. **Order of Operations**: Always solve for subtraction (`oo`) before other operations, as this can produce new drag reactions.
-3. **Single Drag Reactions**: Within a single term, drag reactions within the same domain accumulate until only one remains.
+- **Left `oo`**: The 'opposition' operator. Subtracts functions of the same domain but different charges, resulting in a Right/Drag (`→`) expression.
 
-### Drag Rules
-Refer to the drag rule table for specific rules based on different function interactions.
+- **Bottom `|`**: The 'non-interaction' operator. Indicates two terms cannot react but dynamically switch between each other, taking turns to manifest.
 
-### Drag Rules Table
+### Priority & Transformation Rules
 
-The following table lists outcomes for specific drag reactions using the opposition operator (`oo`). In each case, the function with the higher coefficient "carries" the drag to the opposite dimension and charge.
+1.  **Addition**: First, combine like functions across terms by adding their mass coefficients.
+    - Example: `(2Se) + (3Se) = (5Se)`
+2.  **Opposition First**: Always resolve opposition (`oo`) operations before others, as they generate new drag reactions.
+3.  **Drag Creation**: A drag (`→`) reaction is created under two conditions:
+    - By opposing two functions: `7Se oo 5Si = 2Se → Ni`
+    - By orbiting two functions of opposite dimension: `7Se ~ 3Ti = 4Se → Ni`
+4.  **Drag Accumulation**: Within a single term, drag reactions in the same domain accumulate until only one remains.
+5.  **Subtraction with Drag**: When using `oo` or `~`, the function with the higher mass "carries" the difference and dictates the resulting drag.
+    - Example: `7Se oo 5Si = 2Se → Ni`
+6.  **Orbital Drag Creation**: An orbital relationship (`~`) between a sensory (S/N) and a judgment (T/F) function always creates a drag. The more massive function dictates the nature of the drag.
+    *   `Si ~ Te` results in a drag involving `Ne`.
+    *   `Te ~ Si` results in a drag involving `Fi`.
+
+#### Opposition (`oo`) Examples Table
+
+The following table lists common outcomes for the opposition operator (`oo`). The function with the higher coefficient carries the drag to the opposite dimension and charge.
 
 | Expression      | Result           | Reasoning                             |
 |-----------------|------------------|---------------------------------------|
@@ -71,12 +82,55 @@ The following table lists outcomes for specific drag reactions using the opposit
 | `2Fe oo Fi`     | `Fe → Ti`        | `Fe` is higher, carries the drag      |
 | `3Fi oo 2Fe`    | `Fi → Te`        | `Fi` is higher, carries the drag      |
 
-Each drag reaction creates a directional force based on the opposing domain and charge, simplifying complex expressions by reducing redundant reactions.
+---
+## Astrological & Elemental Correspondence
 
+Use the following table to map the final, simplified algebraic expressions to their astrological and elemental counterparts.
+
+| Astrological Placement | Elemental Name          | Algebraic Expression                          |
+| :--------------------- | :---------------------- | :-------------------------------------------- |
+| Aries-Pisces           | Explosion               | `Se ~ Fi`                                     |
+| Aries-Aries            | Lacerate                | `Se`                                          |
+| Aries-Taurus           | Cut                     | `(Se ~ Fi) oo Si`                             |
+| Taurus-Aries           | Hit/Strike              | `((Si ~ Fe) oo Se)`                           |
+| Taurus-Taurus          | Rock                    | `((Si oo Se) -> Ne )`                          |
+| Taurus-Gemini          | Dust                    | `Ne -> (Si ~ Fe)`                             |
+| Gemini-Taurus          | Quartz                  | `((Ne oo Ni) -> Se) ~ Fe`                      |
+| Gemini-Gemini          | Echoes                  | `(Ne ~ Fe)`                                   |
+| Gemini-Cancer          | Whispers                | `( (Ne -> Si) ~ Ti | Se ~ Fi)`                |
+| Cancer-Gemini          | Rain                    | `(Ne ~ Fi | Se ~ Ti)`                         |
+| Cancer-Cancer          | River                   | `~ (Fe oo Fi)`                                |
+| Cancer-Leo             | Roots                   | `(Fi oo Fe) ~ Si`                             |
+| Leo-Cancer             | Trunk                   | `(Fi -> Te) ~ (Si oo Se)`                     |
+| Leo-Leo                | Light                   | `Te ~ Ni`                                     |
+| Leo-Virgo              | Thunder                 | `(Te ~ Se | Fe ~ Ne)`                         |
+| Virgo-Leo              | Carbonization           | `(Si ~ Te | Ni ~ Fe)`                         |
+| Virgo-Virgo            | Filtration              | `Si ~ (Te oo Ti)`                             |
+| Virgo-Libra            | Crystal                 | `Si ~ (Fe oo Fi)`                             |
+| Libra-Virgo            | Rhythm                  | `(Fe ~ Si | Te ~ Ni )`                         |
+| Libra-Libra            | Wind                    | `(Fi oo Fe) ~`                                |
+| Libra-Scorpio          | Hail                    | `(Fe oo Fi) ~ Ni`                             |
+| Scorpio-Libra          | Ice                     | `(Se -> Ni) ~ (Fe oo Fi)`                     |
+| Scorpio-Scorpio        | Phoenix                 | `(Ni -> Se) ~ Te`                             |
+| Scorpio-Sagittarius    | Poison                  | `(Se ~ Fi | Ne ~ Ti)`                         |
+| Sagittarius-Scorpio    | Pierce/Drill            | `Ni ~ (Te -> Fi)`                             |
+| Sagittarius-Sagittarius| Fire/Blaze              | `(Se ~ Te | Ne ~ Fe)`                         |
+| Sagittarius-Capricorn  | Meteor                  | `Ni ~ (Ti -> Fe)`                             |
+| Capricorn-Sagittarius  | Gravity                 | `( Ne ~ Ti | Se ~ Fi)`                         |
+| Capricorn-Capricorn    | Friction                | `(Te oo Ti) ~`                                |
+| Capricorn-Aquarius     | Darkness                | `(Ti oo Te) ~ Ni`                             |
+| Aquarius-Capricorn     | Static                  | `(Fi -> (Te oo Ti))`                          |
+| Aquarius-Aquarius      | Greatsword/Cleave       | `(Fe -> Ti) ~ Ne`                             |
+| Aquarius-Pisces        | Shadows                 | `(Ti ~ Ne | Fi ~ Se)`                         |
+| Pisces-Aquarius        | Ghost                   | `( Fi ~ Se | Ti ~ Ne)`                         |
+| Pisces-Pisces          | Void/Vacuum             | `Ne ~ Fi`                                     |
+| Pisces-Aries           | Lightning               | `(Fi ~ Ne | Ti ~ Se)`                         |
 
 ---
 
 ## Usage Examples
+
+*Note: These examples follow the core principles of the language. Refer to the updated rules for detailed transformation logic.*
 
 ### Example 1: Solving a Complex Reactor
 ```text
@@ -94,13 +148,12 @@ Step-by-Step Solution:
 
 4. Final result after reduction:
    Result: `59(11Se ~ 3Ti → 9Ni)`
-```
 
-### Example 2: Solving a Complex Reactor
-```text
+
 2(Te ~ Si) | 4(Fe ~ Ni) + (2Ne oo Ni) + 4(Se)
 
 Solution Steps:
+
 1. Solve reduction (`oo`).
 2. Convert reductions and remove the `|` operator.
    Result: `2(Te ~ Si) + 4(Fe ~ 4Se → Ni)`
@@ -110,4 +163,3 @@ Solution Steps:
 
 Final simplified expression:
    `6(Te ~ 3Se → 2Ni)`
-```
