@@ -837,8 +837,7 @@ class OrbFilter:
 
             Score from 1 to 100 how the following document evokes 'echoes' to the reader in a sense of making the subjects and reader  repeat each other while dampening and dilluting the original message. Answer with only the score.
 
-                {document}
-
+                {document} 
         """
 
 
