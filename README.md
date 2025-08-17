@@ -1,6 +1,5 @@
 
-
-![wheel](https://github.com/user-attachments/assets/eb2865fa-43ce-484a-b56a-4a24f5d4f873)
+![wheel_gear](https://github.com/user-attachments/assets/c12a087a-061c-477b-ac2f-f0dddd2b9633)
 
 #  Tektõn
 
